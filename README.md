@@ -27,8 +27,7 @@ As illustrated above, a central idea of this paper is the fact that trajectories
 
 Our trajectory model is based on the one introduced in [https://arxiv.org/abs/2003.13820]("When to use CNNs for Inverse Problems"). We extend the ideas by also optimizing over the camera matricies. Please consult the paper for a full descitpion of this optimization procudure. Below you can see some gifs demonstrating the results as compared to the previous trajectory based NRSfM.
 
-![gif1](figs/slow_text.gif) ![gif2](figs/fast_text.gif)
-
+![gif2](figs/fast_text.gif) ![gif1](figs/slow_text.gif)
 
 ### Acknowledgments
 
