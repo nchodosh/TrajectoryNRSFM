@@ -14,9 +14,19 @@ In the NRSfM problem we are given a data matrix
 ![W](figs/data-matrix.png)
 
 which contains 2D tracks of *P* points over *F* frames. The goal of NRSfM is to take **W** and decompose it into the motion of the camera which imaged the scene, and the motion of the tracked points in 3D space. If we assume that the cameras follow an orthogonal projection model and that the mean column vector of **W** has been removed, then we can write the data matrix as:
+
+![MS](figs/data-structure.png)
+
+The goal of NRSfM is to recover **M** and **S** simultaneously from **W**
+
 ## Summary
 
-![main](figs/main.pdf)
+![main](figs/main.png)
 
-As illustrated above, a central idea of this paper is the fact that trajectories offer a unified model of non-rigid deformation. As shown on the left, shape based representation defines a separate space of deformation for each type of object. This is true even for sequences such as Walking and Dance which we know semantically both belong to the space of human deformations, but must be kept separate due to different numbers and positions of markers.
+As illustrated above, a central idea of this paper is the fact that trajectories offer a unified model of non-rigid deformation. As shown on the left, shape based representation defines a separate space of deformation for each type of object. This is true even for sequences such as Walking and Dance which we know semantically both belong to the space of human deformations, but must be kept separate due to different numbers and positions of markers. We use this fact to perform supervised training of our trajectory model which can then be trasfered to datasets which are not suitable for learning.
+
+Our trajectory model is based on the one introduced in [https://arxiv.org/abs/2003.13820]("When to use CNNs for Inverse Problems"). We extend the ideas by also optimizing over the camera matricies. Please consult the paper for a full descitpion of this optimization procudure. Below you can see some gifs demonstrating the results as compared to the previous trajectory based NRSfM.
+
+![gif1](figs/slow_text.gif) ![gif2](figs/fast_text.gif)
+
 
