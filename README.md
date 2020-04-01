@@ -30,3 +30,8 @@ Our trajectory model is based on the one introduced in [https://arxiv.org/abs/20
 ![gif1](figs/slow_text.gif) ![gif2](figs/fast_text.gif)
 
 
+### Acknowledgments
+
+This work was supported by the CMU Argo AI Center for Autonomous Vehicle Research.
+
+
